@@ -21,7 +21,8 @@ const ISayHi = {
 }
 
 // We'll define our classes as subclasses of the `Interfacer` class.
-// In the constructor, we'll set the `interfaces` property.
+// In the constructor, we'll set the `interfaces` property to indicate
+// which interfaces must be implemented.
 class Person extends Interfacer {
   constructor() {
     super()
