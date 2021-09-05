@@ -1,8 +1,8 @@
-const Base = require("./base.js")
+const Interfacer = require("./interfacer.js")
 const ISayHi = { sayHi() {} }
 const IDoSomething = { doSomething() {} }
 
-class Sub extends Base {
+class Sub extends Interfacer {
   constructor() {
     super()
     const self = this

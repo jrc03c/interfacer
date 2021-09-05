@@ -1,4 +1,4 @@
-class Base {
+class Interfacer {
   constructor() {
     const self = this
 
@@ -21,4 +21,4 @@ class Base {
   }
 }
 
-module.exports = Base
+module.exports = Interfacer
