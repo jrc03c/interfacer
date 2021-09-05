@@ -43,7 +43,7 @@ class Robot extends Interfacer {
 }
 ```
 
-Note that the `Robot` class has not implemented the `sayHi()` method yet! If we tried to make a new `Robot` and invoke its `sayHi()` method, we'd get an error:
+Note that the `Robot` class has not implemented the `sayHi()` method yet! If we tried to make a new `Robot`, we'd get an error:
 
 ```bash
 The `Robot` class must implement a `sayHi()` method!
