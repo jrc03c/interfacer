@@ -1,6 +1,6 @@
 {
   "name": "@jrc03c/interfacer.js",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "**interfacer.js** is just a little experiment with adding interfaces to JS.",
   "main": "interfacer.js",
   "scripts": {
