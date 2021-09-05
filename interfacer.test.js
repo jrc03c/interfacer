@@ -77,9 +77,9 @@ test("tests that interfaces can be stacked / nested / overridden in subclasses",
 test("tests that a single interface can have multiple methods", () => {
   const IDoManyThings = {
     cook() {},
+    eat() {},
     clean() {},
     wash() {},
-    eat() {},
     sleep() {},
   }
 
