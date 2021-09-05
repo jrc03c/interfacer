@@ -7,7 +7,9 @@ class Interfacer {
         Object.keys(iface).forEach(key => {
           if (!self[key]) {
             self[key] = () => {
-              throw new Error(`This object must implement a "${key}" method!`)
+              throw new Error(
+                `The "${self.constructor.name}" class must implement a "${key}" method!`
+              )
             }
           }
         })
@@ -19,6 +21,14 @@ class Interfacer {
       enumerable: false,
 
       set(ifaces) {
+        if (!ifaces) return
+
+        if (!(ifaces instanceof Array)) {
+          throw new Error(
+            "The `interfaces` property must be set with an array of interface objects!"
+          )
+        }
+
         helper(ifaces)
       },
     })
@@ -28,6 +38,14 @@ class Interfacer {
       enumerable: false,
 
       set(ifaces) {
+        if (!ifaces) return
+
+        if (!(ifaces instanceof Array)) {
+          throw new Error(
+            "The `implements` property must be set with an array of interface objects!"
+          )
+        }
+
         helper(ifaces)
       },
     })
