@@ -46,7 +46,7 @@ class Robot extends Interfacer {
 Note that the `Robot` class has not implemented the `sayHi()` method yet! If we tried to make a new `Robot` and invoke its `sayHi()` method, we'd get an error:
 
 ```bash
-The "Robot" class must implement a "sayHi" method!
+The `Robot` class must implement a `sayHi()` method!
 ```
 
 Each interface must be a plain, shallow JS object where each property of the object is a function (as illustrated by the `ISayHi` interface above). The `interfaces` property of any subclass of `Interfacer` can be set with an array of such interface objects.

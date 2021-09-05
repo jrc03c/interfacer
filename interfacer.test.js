@@ -130,3 +130,24 @@ test("tests that interfaces can't be set in weird ways", () => {
     const b = new B()
   }).toThrow()
 })
+
+test("tests that interfaces are actually implemented and not just mocked with a property name", () => {
+  const IActuallyImplementThings = {
+    foo() {},
+  }
+
+  class A extends Interfacer {
+    constructor() {
+      super()
+      const self = this
+      self.interfaces = [IActuallyImplementThings]
+    }
+
+    foo = "bar"
+  }
+
+  expect(() => {
+    const a = new A()
+    a.foo()
+  }).toThrow()
+})
