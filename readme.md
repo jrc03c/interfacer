@@ -13,6 +13,7 @@ npm install --save https://github.com/jrc03c/interfacer.js
 This library provides an `Interfacer` class that must be extended, like this:
 
 ```js
+// Import the `Interfacer` class.
 const Interfacer = require("@jrc03c/interfacer.js")
 
 // `ISayHi` is the interface our classes should implement.
