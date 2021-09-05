@@ -10,11 +10,9 @@ class Interfacer {
 
         Object.keys(iface).forEach(key => {
           if (!self[key] || typeof self[key] !== "function") {
-            self[key] = () => {
-              throw new Error(
-                `The \`${self.constructor.name}\` class must implement a \`${key}()\` method!`
-              )
-            }
+            throw new Error(
+              `The \`${self.constructor.name}\` class must implement a \`${key}()\` method!`
+            )
           }
         })
       })
