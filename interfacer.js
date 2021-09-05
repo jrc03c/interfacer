@@ -4,6 +4,10 @@ class Interfacer {
 
     function helper(ifaces) {
       ifaces.forEach(iface => {
+        if (!(iface instanceof Object)) {
+          throw new Error("Each interface must be a plain, shallow object!")
+        }
+
         Object.keys(iface).forEach(key => {
           if (!self[key]) {
             self[key] = () => {
