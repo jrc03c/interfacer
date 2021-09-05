@@ -74,6 +74,37 @@ test("tests that interfaces can be stacked / nested / overridden in subclasses",
   expect(c.sing()).toBe("singing")
 })
 
+test("tests that a single interface can have multiple methods", () => {
+  const IDoManyThings = {
+    cook() {},
+    clean() {},
+    wash() {},
+    eat() {},
+    sleep() {},
+  }
+
+  class TiredPerson extends Interfacer {
+    constructor() {
+      super()
+      const self = this
+      self.interfaces = [IDoManyThings]
+    }
+
+    cook = () => "the food"
+    eat = () => "the cooked food"
+    clean = () => "the dishes"
+    wash = () => "the clothes"
+    sleep = () => "like a baby"
+  }
+
+  const p = new TiredPerson()
+  expect(p.cook()).toBe("the food")
+  expect(p.eat()).toBe("the cooked food")
+  expect(p.clean()).toBe("the dishes")
+  expect(p.wash()).toBe("the clothes")
+  expect(p.sleep()).toBe("like a baby")
+})
+
 test("tests that interfaces can't be set in weird ways", () => {
   class A extends Interfacer {
     constructor() {
